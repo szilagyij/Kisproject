@@ -24,8 +24,6 @@ function PasswordGenerate() {
 PasswordGenerate();
 
 function RegBtn() {
-    const regbtn = document.getElementById('regbtn');
-    regbtn.addEventListener('click', () => {
         const name = document.getElementById('name');
         const email = document.getElementById('email');
         const profession = document.getElementById('profession');
@@ -67,6 +65,6 @@ function RegBtn() {
         } else {
             alert('Kérlek töltse ki az összes mezőt!');
         }
-    });
+    
 }
 
