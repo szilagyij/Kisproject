@@ -65,7 +65,7 @@ function RegBtn() {
         if (name.value !== '' && email.value !== '' && profession.value !== '' && age.value !== '' && password.value !== '') {
             console.log(name.value, email.value, profession.value, age.value, password.value);
         } else {
-            alert('Kérlek töltse ki az összes mez t!');
+            alert('Kérlek töltse ki az összes mezőt!');
         }
     });
 }
