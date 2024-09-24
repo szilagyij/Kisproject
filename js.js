@@ -21,10 +21,14 @@ function PasswordGenerate() {
 
 PasswordGenerate();
 
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData.entries());
-    console.log(data);
 
+document.getElementById('showPassword').addEventListener('click', function() {
+    const passwordInput = document.getElementById('password');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
 });
+
+
