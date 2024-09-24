@@ -73,26 +73,25 @@
 <body>
     <div class="container" style="margin-top: 3rem;">
         <h1>Regisztráció </h1>
-        <form action="index.html" method="get" onsubmit="event.preventDefault(); console.log(new formData(event.target)); return false;">
+        <form id="registrationForm">
             <div class="mb-3">
                 <label for="name" class="form-label">
-                    <img src="name.svg" alt="Név" width="16" height="16">
-                    Név
+                    <img src="name.svg" alt="Név" width="16" height="16"> Név
                 </label>
-                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name="name">
+                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name="name" required>
             </div>
             <div class="mb-3">
                 <label for="profession" class="form-label">
-                    <img src="work.svg" alt="Foglalkozás" width="16" height="16">
-                    Foglalkozás
+                    <img src="work.svg" alt="Foglalkozás" width="16" height="16"> Foglalkozás
                 </label>
-                <select class="form-select" id="profession" name="profession">
+                <select class="form-select" id="profession" name="profession" required>
+                    <option value="" disabled selected>Válasszon foglalkozást</option>
                     <option value="informatikus">Informatikus</option>
                     <option value="tanár">Tanár</option>
                     <option value="orvos">Orvos</option>
                     <option value="mérnök">Mérnök</option>
                     <option value="jogász">Jogász</option>
-                    <option value="könyvel ">Könyvel </option>
+                    <option value="könyvel">Könyvel</option>
                     <option value="színész">Színész</option>
                     <option value="zenész">Zenész</option>
                     <option value="sportoló">Sportoló</option>
@@ -100,15 +99,13 @@
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">
-                    <img src="mail.svg" alt="E-mail cím" width="16" height="16">
-                    E-mail cím
+                    <img src="mail.svg" alt="E-mail cím" width="16" height="16"> E-mail cím
                 </label>
-                <input type="email" class="form-control" id="email" name="email">
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="mb-3">
                 <label for="gender" class="form-label">
-                    <img src="nem.svg" alt="Nem" width="16" height="16">
-                    Nem
+                    <img src="nem.svg" alt="Nem" width="16" height="16"> Nem
                 </label>
                 <select class="form-select" id="gender" name="gender">
                     <option value="male">Férfi</option>
@@ -125,16 +122,14 @@
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">
-                    <img src="key.svg" alt="Jelszó " width="16" height="16">
-                    Jelszó
+                    <img src="key.svg" alt="Jelszó " width="16" height="16"> Jelszó
                 </label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="password" name="password">
+                    <input type="text" class="form-control" id="password" name="password" required>
                     <button class="btn btn-outline-secondary" type="button" id="generatePassword">Generálás</button>
                 </div>
             </div>
-            
-            <button type="button" class="btn" onclick="RegBtn()" id="regbtn">Regisztráció</button>
+            <button type="submit" class="btn" id="regbtn">Regisztráció</button>
         </form>
     </div>
 
